@@ -6,10 +6,11 @@ import Footer from "../components/Footer";
 
 import "./all.sass";
 import Helmet from "react-helmet";
+import Bio from "./Bio";
 
 const favicon32 = require("../../static/favicon.ico");
 
-const TemplateWrapper: React.FC<{}> = ({ children }) => (
+const TemplateWrapper: React.FC = props => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -44,7 +45,8 @@ const TemplateWrapper: React.FC<{}> = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <div>{children}</div>
+        <Bio />
+        <div>{props.children}</div>
         <Footer />
       </div>
     )}

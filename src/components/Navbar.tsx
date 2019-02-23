@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { graphql, Link, StaticQuery } from "gatsby";
 import { FaRss } from "react-icons/fa";
 
 const Navbar = class extends React.Component {
@@ -28,43 +28,57 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-        style={{ fontFamily: "Raleway" }}
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              hogehoge
-            </Link>
-            {/* Hamburger menu */}
-            <div className="navbar-burger burger" data-target="navMenu">
-              <span />
-              <span />
-              <span />
+      <StaticQuery
+        query={graphql`
+          query NavbarQuery {
+            site {
+              siteMetadata {
+                title
+                description
+              }
+            }
+          }
+        `}
+        render={data => (
+          <nav
+            className="navbar is-transparent"
+            role="navigation"
+            aria-label="main-navigation"
+            style={{ fontFamily: "Raleway" }}
+          >
+            <div className="container">
+              <div className="navbar-brand">
+                <Link to="/" className="navbar-item" title="Logo">
+                  {data.site.siteMetadata.title}
+                </Link>
+                {/* Hamburger menu */}
+                <div className="navbar-burger burger" data-target="navMenu">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+              <div id="navMenu" className="navbar-menu">
+                <div className="navbar-start has-text-centered">
+                  <Link className="navbar-item" to="/about">
+                    About
+                  </Link>
+                  <Link className="navbar-item" to="/blog">
+                    Blog
+                  </Link>
+                </div>
+                <div className="navbar-end has-text-centered">
+                  <Link className="navbar-item" to="/rss">
+                    <span className="icon">
+                      <FaRss />
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="navMenu" className="navbar-menu">
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/rss">
-                <span className="icon">
-                  <FaRss />
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+          </nav>
+        )}
+      />
     );
   }
 };

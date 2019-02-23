@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: first commit
 date: "2017-10-15T00:00Z"
+tags: ["tag1", "tag2"]
 ---
 
 [Jekyll](https://jekyllrb-ja.github.io/) + [GitHub Pages](https://pages.github.com/) でブログを作ってみた。<br>
