@@ -5,7 +5,7 @@ import { FaRss } from "react-icons/fa";
 const Navbar = class extends React.Component {
   componentDidMount() {
     // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(
+    const $navbarBurgers: Array<HTMLElement> = Array.prototype.slice.call(
       document.querySelectorAll(".navbar-burger"),
       0
     );

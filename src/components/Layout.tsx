@@ -1,15 +1,15 @@
 import * as React from "react";
-import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import "./all.sass";
+import Helmet from "react-helmet";
 
-const favicon = require("../../static/favicon.ico");
+const favicon32 = require("../../static/favicon.ico");
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper: React.FC<{}> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query HeadingQuery {
@@ -34,13 +34,8 @@ const TemplateWrapper = ({ children }) => (
             href="https://fonts.googleapis.com/css?family=Raleway"
             rel="stylesheet"
           />
-          <link rel="icon" type="image/png" href={favicon} sizes="32x32" />
+          <link rel="icon" type="image/png" href={favicon32} sizes="32x32" />
 
-          <link
-            rel="mask-icon"
-            href="/img/safari-pinned-tab.svg"
-            color="#ff4400"
-          />
           <meta name="theme-color" content="#fff" />
 
           <meta property="og:type" content="website" />

@@ -1,7 +1,7 @@
 ---
 templateKey: "about-page"
 path: /about
-title: About our values
+title: About
 ---
 
 ## Skills
@@ -23,6 +23,5 @@ title: About our values
 
 ## History
 
-Backend Software Engineer at DeNA Co., Ltd. (2017 - Present)
-
-Graduate School of Information Sciences, Tohoku Univ. (2015 - 2016)
+- Backend Software Engineer at DeNA Co., Ltd. (2017 - Present)
+- Graduate School of Information Sciences, Tohoku Univ. (2015 - 2016)
