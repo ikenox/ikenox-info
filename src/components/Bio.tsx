@@ -5,7 +5,7 @@ const profilePic = require("../../static/img/profile.jpeg");
 import Link from "gatsby-link";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 
-const Bio = (
+const Bio = () => (
   <div
     style={{ verticalAlign: "middle", display: "flex", alignItems: "center" }}
   >

@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import BlogRoll from "../components/BlogRoll";
+import Bio from "../components/Bio";
 
 export const IndexPageTemplate = ({
   image,
@@ -16,6 +17,7 @@ export const IndexPageTemplate = ({
   main
 }) => (
   <div>
+    <Bio />
     <BlogRoll />
   </div>
 );

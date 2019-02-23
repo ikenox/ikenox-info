@@ -1,7 +1,6 @@
-import React from "react";
+import * as React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
-import logo from "../img/logo.svg";
+import { FaRss } from "react-icons/fa";
 
 const Navbar = class extends React.Component {
   componentDidMount() {
@@ -33,11 +32,12 @@ const Navbar = class extends React.Component {
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
+        style={{ fontFamily: "Raleway" }}
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+              hogehoge
             </Link>
             {/* Hamburger menu */}
             <div className="navbar-burger burger" data-target="navMenu">
@@ -56,16 +56,11 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
             <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link className="navbar-item" to="/rss">
                 <span className="icon">
-                  <img src={github} alt="Github" />
+                  <FaRss />
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

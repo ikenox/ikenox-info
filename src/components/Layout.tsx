@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import "./all.sass";
+
+const favicon = require("../../static/favicon.ico");
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -28,24 +30,11 @@ const TemplateWrapper = ({ children }) => (
             name="description"
             content={data.site.siteMetadata.description}
           />
-
           <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/img/apple-touch-icon.png"
+            href="https://fonts.googleapis.com/css?family=Raleway"
+            rel="stylesheet"
           />
-          <link
-            rel="icon"
-            type="image/png"
-            href="/img/favicon-32x32.png"
-            sizes="32x32"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            href="/img/favicon-16x16.png"
-            sizes="16x16"
-          />
+          <link rel="icon" type="image/png" href={favicon} sizes="32x32" />
 
           <link
             rel="mask-icon"
