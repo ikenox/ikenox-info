@@ -1,11 +1,11 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import React from "react";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import './all.sass'
+import "./all.sass";
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery
@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => (
           />
           <meta name="theme-color" content="#fff" />
 
-          <meta property="og:type" content="business.business" />
+          <meta property="og:type" content="website" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
@@ -65,6 +65,6 @@ const TemplateWrapper = ({ children }) => (
       </div>
     )}
   />
-)
+);
 
-export default TemplateWrapper
+export default TemplateWrapper;
