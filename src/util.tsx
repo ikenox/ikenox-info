@@ -1,9 +1,3 @@
-export function debugLog(obj: any) {
-  if (!isProduction()) {
-    console.log(obj);
-  }
-}
-
-export function isProduction(): boolean {
+export function isProduction() {
   return process.env.NODE_ENV === "production";
 }

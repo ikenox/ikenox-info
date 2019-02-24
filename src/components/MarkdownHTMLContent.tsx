@@ -7,9 +7,21 @@ import "prismjs/components/prism-perl";
 import "./prism.css";
 import "./prism-custom.sass";
 
+import { isProduction } from "util";
+
 const MarkdownHTMLContent = class extends React.Component<{ content: string }> {
   componentDidMount() {
     Prism.highlightAll();
+  }
+
+  componentDidUpdate(
+    prevProps: Readonly<{ content: string }>,
+    prevState: Readonly<{}>,
+    snapshot?: any
+  ): void {
+    if (!isProduction()) {
+      Prism.highlightAll();
+    }
   }
 
   render() {
