@@ -35,7 +35,6 @@ const TemplateWrapper: React.FC = props => (
 
           <meta property="og:type" content="website" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
-          <meta property="og:url" content="/" />
           <meta property="og:image" content={icon} />
           <meta
             property="og:description"
