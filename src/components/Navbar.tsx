@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { FaRss } from "react-icons/fa";
+import ExternalLink from "./ExternalLink";
 
 const Navbar: React.FC<{ siteTitle: string }> = props => (
   <nav role="navigation">
@@ -13,9 +14,9 @@ const Navbar: React.FC<{ siteTitle: string }> = props => (
       {/*&nbsp;*/}
       {/*<Link to="/blog">Blog</Link>*/}
       {/*&nbsp;*/}
-      <Link to="/rss.xml" target="_blank">
+      <ExternalLink to="/rss.xml">
         <FaRss />
-      </Link>
+      </ExternalLink>
     </div>
   </nav>
 );

@@ -24,7 +24,7 @@ const TemplateWrapper: React.FC = props => (
       }
     `}
     render={data => (
-      <div>
+      <div style={{ maxWidth: "800px", margin: "auto" }}>
         <Helmet>
           <title>{data.site.siteMetadata.title}</title>
           <meta
