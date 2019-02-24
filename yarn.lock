@@ -4835,6 +4835,13 @@ gatsby-plugin-feed@^2.0.13:
     pify "^3.0.0"
     rss "^1.2.2"
 
+gatsby-plugin-google-analytics@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.14.tgz#b6f7e84f5eb6bcacd5831fe5dd8e8a3367136678"
+  integrity sha512-sFD73d9isJQknnDAAkDidaybHJx6VIaLfy3nO3DwbFaitvZ08RimbynYOkcWAeA0zwwix2RgAvbq/9pAmtTb/A==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-netlify-cms@^3.0.9:
   version "3.0.12"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.12.tgz#1812653fba2690f85b2796fa22e4b59b7b169520"
@@ -10139,6 +10146,11 @@ react-side-effect@^1.1.0:
   dependencies:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
+
+react-social-sharebuttons@^3.0.0-alpha1:
+  version "3.0.0-alpha1"
+  resolved "https://registry.yarnpkg.com/react-social-sharebuttons/-/react-social-sharebuttons-3.0.0-alpha1.tgz#d7fd3e2c1540b3e94e7c58b23f76feaad9b43978"
+  integrity sha512-39Z7QYK7k55/jxsUrb4LT7NMgCyVmKU9OBt2It90+sGxyGXjrB5PL/m3XghnejHRg7HajCMEu4ztjBmLma8Mpw==
 
 react-sortable-hoc@^0.6.8:
   version "0.6.8"

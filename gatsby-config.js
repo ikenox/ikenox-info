@@ -63,6 +63,12 @@ module.exports = {
       resolve: `gatsby-plugin-feed`
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-108087720-1`
+      }
+    },
+    {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`

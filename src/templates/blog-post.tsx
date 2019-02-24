@@ -12,10 +12,12 @@ export const BlogPostTemplate: React.FC<{
   tags: Array<any>;
   title: any;
   date: string;
-  thumbnail?: any | null;
+  thumbnail?: any;
+  lang?: string;
 }> = props => (
   <section className="section">
     <Helmet>
+      <html lang={props.lang !== null ? props.lang : "ja"} />
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
       <meta property="og:description" content={props.description} />
@@ -60,6 +62,7 @@ const BlogPost: React.FC<{
         title={props.data.markdownRemark.frontmatter.title}
         date={props.data.markdownRemark.frontmatter.date}
         thumbnail={props.data.markdownRemark.frontmatter.thumbnail}
+        lang={props.data.markdownRemark.frontmatter.lang}
       />
       <Bio />
     </Layout>
@@ -86,6 +89,7 @@ export const pageQuery = graphql`
         thumbnail {
           publicURL
         }
+        lang
       }
     }
   }

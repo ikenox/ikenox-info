@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Getting Started with IdeaVim
 date: "2019-01-25T00:00Z"
 thumbnail: "./overview.gif"
+lang: en
 ---
 
 Japanese version is [here](/2017-12-25-ideavim-introduction)

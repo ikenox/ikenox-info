@@ -26,7 +26,6 @@ const TemplateWrapper: React.FC = props => (
     render={data => (
       <div>
         <Helmet>
-          <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
           <meta
             name="description"

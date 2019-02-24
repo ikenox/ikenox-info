@@ -8,5 +8,6 @@
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017"]
   },
-  "include": ["./src/**/*"]
+  "include": ["*.js", "*.tsx", "*.json"],
+  "exclude": ["./node_modules", "package-lock.json"]
 }
