@@ -88,7 +88,7 @@ noremap ; :
 
 To share the settings, I prepared a shared keymaps file `.vimrc.keymap`. It is loaded in `.vimrc` and `.ideavimrc` by a `source` command. Thus you can centralize the common basic keymaps to the one file.
 
-##### .ideavimrc
+#### .ideavimrc
 
 ```vim
 " Load common basic keymaps
@@ -97,7 +97,7 @@ source .vimrc.keymap
 " IdeaVim specific settings are here
 ```
 
-##### .vimrc.keymap
+#### .vimrc.keymap
 
 ```vim
 " Common basic keymaps

@@ -5,9 +5,11 @@ import "prismjs/components/prism-java";
 import "prismjs/components/prism-vim";
 import "prismjs/components/prism-perl";
 import "./prism.css";
-import "./prism-custom.sass";
+import { isProduction } from "../util";
 
-import { isProduction } from "util";
+// FIXME move to all.sass
+import "./prism-custom.sass";
+import "./blog-post.sass";
 
 const MarkdownHTMLContent = class extends React.Component<{ content: string }> {
   componentDidMount() {
