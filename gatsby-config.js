@@ -8,6 +8,7 @@ module.exports = {
     "gatsby-plugin-typescript",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
+    "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-transformer-remark`,
       options: {

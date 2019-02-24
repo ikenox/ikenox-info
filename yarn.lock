@@ -4824,6 +4824,14 @@ gatsby-link@^2.0.10:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-catch-links@^2.0.11:
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.0.11.tgz#c2d390978ffe5a353901b981116fdf231103b625"
+  integrity sha512-tnnXRSNdH5oIdH70WIvOHu7zNZQeHvY210fcNGZLJ00JNetetJqkBlklRgGIqG7kClBoHB7LcGxMu/2cXnHH/g==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    escape-string-regexp "^1.0.5"
+
 gatsby-plugin-feed@^2.0.13:
   version "2.0.13"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.13.tgz#4a457a81d28cbe1ebb6d944272711b0a0671bbd3"
