@@ -23,9 +23,7 @@ IdeaVim は、**IntelliJ や Android Studio などの JetBrains 系列の IDE �
 
 ※キーマップはカスタマイズ済です。
 
-<center>
-    <img src="./overview.gif" style="max-width:100%;"></img>
-</center>
+<img src="./overview.gif" style="max-width:100%;"></img>
 
 ### なぜ IdeaVim を使うか
 
@@ -193,9 +191,7 @@ vnoremap ,a :action GotoAction<CR>
 検索結果には現在そのアクションに割り当てられているショートカットキーも表示されるため、それも参考にすると見つけやすいかと思います。
 (ショートカットキーでアクションの検索ができるようになってくれると便利そうですね…)
 
-<center>
-    <img src="./actionlist.gif" style="max-width:100%;"></img>
-</center>
+<img src="./actionlist.gif" style="max-width:100%;"></img>
 
 ## おわりに
 
