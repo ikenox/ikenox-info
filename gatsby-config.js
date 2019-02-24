@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "ikenox.info",
-    description: "Naoto Ikeno's Tech Blog"
+    description: "Naoto Ikeno's Tech Blog",
+    siteUrl: "ikenox.info"
   },
   plugins: [
     "gatsby-plugin-typescript",
@@ -60,10 +61,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-feed`
+      resolve: "gatsby-plugin-feed"
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: `UA-108087720-1`
       }

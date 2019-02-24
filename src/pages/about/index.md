@@ -7,10 +7,10 @@ title: About
 ## Skills
 
 - Server-side Development (Perl, Go, Java, Python, SQL, GCP)
-- A Simple, Flexible and Scalable Architecture Design
+- A Simple, Flexible and Scalable Software Architecture Design
   - Domain Driven Design
   - Clean Architecture
-  - MicroServices
+  - MicroServices Architecture
 - Android App Development (Java)
 - Data Analysis and Visualization (Python)
 
