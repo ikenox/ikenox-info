@@ -8,6 +8,7 @@ import Bio from "../components/Bio";
 
 export const BlogPostTemplate: React.FC<{
   content: any;
+  description: any;
   tags: Array<any>;
   title: any;
   date: string;
@@ -29,7 +30,7 @@ export const BlogPostTemplate: React.FC<{
     </Helmet>
     <div>
       <h1 className="text-xxlarge">{props.title}</h1>
-      <span>{props.date}</span>
+      {props.date}
       <HTMLContent content={props.content} />
       {props.tags && props.tags.length ? (
         <div style={{ marginTop: `4rem` }}>
@@ -55,6 +56,7 @@ const BlogPost: React.FC<{
       <Helmet titleTemplate={`%s - ${props.data.site.siteMetadata.title}`} />
       <BlogPostTemplate
         content={props.data.markdownRemark.html}
+        description={props.data.markdownRemark.frontmatter.description}
         tags={props.data.markdownRemark.frontmatter.tags}
         title={props.data.markdownRemark.frontmatter.title}
         date={props.data.markdownRemark.frontmatter.date}
