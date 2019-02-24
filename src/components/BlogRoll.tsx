@@ -6,33 +6,21 @@ const BlogRoll: React.FC<{
 }> = props => {
   return (
     <div className="columns is-multiline">
-      {console.log(props.posts)}
       {props.posts &&
         props.posts
           .map(post => post.node)
           .map(post => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article className="tile is-child box notification">
-                <p>
-                  <Link
-                    className="title has-text-primary is-size-4"
-                    to={post.fields.slug}
-                  >
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
-                    {post.frontmatter.date}
-                  </span>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
+            <div
+              key={post.id}
+              style={{ marginTop: "2rem", marginBottom: "2rem" }}
+            >
+              <hr />
+              <article>
+                <h2>
+                  <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                </h2>
+                <span>{post.frontmatter.date}</span>
+                <p>{post.excerpt}</p>
               </article>
             </div>
           ))}

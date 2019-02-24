@@ -9,6 +9,7 @@ import Helmet from "react-helmet";
 import Bio from "./Bio";
 
 const favicon32 = require("../../static/favicon.ico");
+const icon = require("../../static/icon.png");
 
 const TemplateWrapper: React.FC = props => (
   <StaticQuery
@@ -31,22 +32,22 @@ const TemplateWrapper: React.FC = props => (
             name="description"
             content={data.site.siteMetadata.description}
           />
-          <link
-            href="https://fonts.googleapis.com/css?family=Raleway"
-            rel="stylesheet"
-          />
           <link rel="icon" type="image/png" href={favicon32} sizes="32x32" />
-
-          <meta name="theme-color" content="#fff" />
 
           <meta property="og:type" content="website" />
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
-          <meta property="og:image" content="/img/og-image.jpg" />
+          <meta property="og:image" content={icon} />
+          <meta
+            property="og:description"
+            content={data.site.siteMetadata.description}
+          />
         </Helmet>
-        <Navbar />
-        <Bio />
-        <div>{props.children}</div>
+        <Navbar siteTitle={data.site.siteMetadata.title} />
+        <div>
+          <Bio />
+          {props.children}
+        </div>
         <Footer />
       </div>
     )}

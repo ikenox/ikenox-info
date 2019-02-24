@@ -1,66 +1,67 @@
 import * as React from "react";
-import * as PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { graphql, Link, StaticQuery, StaticQueryProps } from "gatsby";
 import Layout from "../components/Layout";
 import HTMLContent from "../components/HTMLContent";
+import Bio from "../components/Bio";
 
 export const BlogPostTemplate: React.FC<{
   content: any;
   description: any;
   tags: Array<any>;
   title: any;
-  helmet: any;
+  date: string;
+  thumbnail?: any | null;
 }> = props => (
   <section className="section">
-    {props.helmet || ""}
-    <div className="container content">
-      <div className="columns">
-        <div className="column is-10 is-offset-1">
-          <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-            {props.title}
-          </h1>
-          <p>{props.description}</p>
-          <HTMLContent content={props.content} />
-          {props.tags && props.tags.length ? (
-            <div style={{ marginTop: `4rem` }}>
-              <h4>Tags</h4>
-              <ul className="taglist">
-                {props.tags.map(tag => (
-                  <li key={tag + `tag`}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
+    <Helmet>
+      <title>{props.title}</title>
+      <meta name="description" content={props.description} />
+      <meta property="og:description" content={props.description} />
+      <meta property="og:type" content="article" />
+      {props.thumbnail !== null ? (
+        <meta property="og:image" content={props.thumbnail.publicURL} />
+      ) : (
+        ""
+      )}
+    </Helmet>
+    <div>
+      <h1 className="text-xxlarge">{props.title}</h1>
+      {props.date}
+      <p>{props.description}</p>
+      <HTMLContent content={props.content} />
+      {props.tags && props.tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {props.tags.map(tag => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      ) : null}
     </div>
   </section>
 );
 
 const BlogPost: React.FC<{
-  data: { markdownRemark: any };
+  data: { markdownRemark: any; site: any };
 }> = props => {
   return (
     <Layout>
+      <Helmet titleTemplate={`%s - ${props.data.site.siteMetadata.title}`} />
       <BlogPostTemplate
         content={props.data.markdownRemark.html}
         description={props.data.markdownRemark.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${props.data.markdownRemark.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${props.data.markdownRemark.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={props.data.markdownRemark.frontmatter.tags}
         title={props.data.markdownRemark.frontmatter.title}
+        date={props.data.markdownRemark.frontmatter.date}
+        thumbnail={props.data.markdownRemark.frontmatter.thumbnail}
       />
+      <Bio />
     </Layout>
   );
 };
@@ -69,6 +70,11 @@ export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -77,6 +83,9 @@ export const pageQuery = graphql`
         title
         description
         tags
+        thumbnail {
+          publicURL
+        }
       }
     }
   }

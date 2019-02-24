@@ -5,3 +5,5 @@ const ExternalLink: React.FC<{ to: string }> = props => (
     {props.children}
   </a>
 );
+
+export default ExternalLink;

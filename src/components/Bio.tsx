@@ -4,10 +4,17 @@ const profilePic = require("../../static/img/profile.jpeg");
 
 import Link from "gatsby-link";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import ExternalLink from "./ExternalLink";
 
 const Bio = () => (
   <div
-    style={{ verticalAlign: "middle", display: "flex", alignItems: "center" }}
+    style={{
+      marginTop: "1.5rem",
+      marginBottom: "1.5rem",
+      verticalAlign: "middle",
+      display: "flex",
+      alignItems: "center"
+    }}
   >
     <Link to={`/about`} style={{ float: "left", lineHeight: 0 }}>
       <img
@@ -19,35 +26,19 @@ const Bio = () => (
       />
     </Link>
     <div style={{ marginLeft: "12px" }}>
-      <p
-        style={{
-          fontSize: "1.2em",
-          fontWeight: 700,
-          margin: 0,
-          lineHeight: "1.2em"
-        }}
-      >
-        Naoto Ikeno
-      </p>
-      <p
-        style={{
-          fontSize: ".8em",
-          color: "#666",
-          fontWeight: 500,
-          margin: 0,
-          lineHeight: "1.2em"
-        }}
-      >
-        Backend Engineer, Software Architecture & Design, Perl, Golang, GCP
-      </p>
-      <p style={{ fontSize: "1.2em", margin: 0, lineHeight: "1.2em" }}>
-        <a href={`https://github.com/ikenox`} target={`_blank`}>
+      <span className="text-large heading">Naoto Ikeno</span>
+      &nbsp;
+      <span className="text-large">
+        <ExternalLink to={`https://github.com/ikenox`}>
           <FaGithub />
-        </a>
-        <a href={`https://twitter.com/ikenox_`} target={`_blank`}>
+        </ExternalLink>
+        &nbsp;
+        <ExternalLink to={`https://twitter.com/ikenox_`}>
           <FaTwitter />
-        </a>
-      </p>
+        </ExternalLink>
+      </span>
+      <br />
+      Backend Engineer, Software Architecture & Design, Perl, Rust, Golang, GCP
     </div>
   </div>
 );

@@ -1,86 +1,24 @@
 import * as React from "react";
-import { graphql, Link, StaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import { FaRss } from "react-icons/fa";
 
-const Navbar = class extends React.Component {
-  componentDidMount() {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers: Array<HTMLElement> = Array.prototype.slice.call(
-      document.querySelectorAll(".navbar-burger"),
-      0
-    );
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Add a click event on each of them
-      $navbarBurgers.forEach(el => {
-        el.addEventListener("click", () => {
-          // Get the target from the "data-target" attribute
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-
-          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-          el.classList.toggle("is-active");
-          $target.classList.toggle("is-active");
-        });
-      });
-    }
-  }
-
-  render() {
-    return (
-      <StaticQuery
-        query={graphql`
-          query NavbarQuery {
-            site {
-              siteMetadata {
-                title
-                description
-              }
-            }
-          }
-        `}
-        render={data => (
-          <nav
-            className="navbar is-transparent"
-            role="navigation"
-            aria-label="main-navigation"
-            style={{ fontFamily: "Raleway" }}
-          >
-            <div className="container">
-              <div className="navbar-brand">
-                <Link to="/" className="navbar-item" title="Logo">
-                  {data.site.siteMetadata.title}
-                </Link>
-                {/* Hamburger menu */}
-                <div className="navbar-burger burger" data-target="navMenu">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
-              <div id="navMenu" className="navbar-menu">
-                <div className="navbar-start has-text-centered">
-                  <Link className="navbar-item" to="/about">
-                    About
-                  </Link>
-                  <Link className="navbar-item" to="/blog">
-                    Blog
-                  </Link>
-                </div>
-                <div className="navbar-end has-text-centered">
-                  <Link className="navbar-item" to="/rss">
-                    <span className="icon">
-                      <FaRss />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </nav>
-        )}
-      />
-    );
-  }
-};
+const Navbar: React.FC<{ siteTitle: string }> = props => (
+  <nav
+    role="navigation"
+    aria-label="main-navigation"
+    style={{ fontFamily: "Raleway" }}
+  >
+    <div>
+      <Link to="/" className="text-xlarge">
+        <b className="heading">{props.siteTitle}</b>
+      </Link>
+      <Link to="/about">About</Link>
+      <Link to="/blog">Blog</Link>
+      <Link to="/rss">
+        <FaRss />
+      </Link>
+    </div>
+  </nav>
+);
 
 export default Navbar;
