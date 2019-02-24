@@ -22,7 +22,10 @@ export const BlogPostTemplate: React.FC<{
       <meta property="og:description" content={props.description} />
       <meta property="og:type" content="article" />
       {props.thumbnail !== null ? (
-        <meta property="og:image" content={props.thumbnail.publicURL} />
+        <meta
+          property="og:image"
+          content={"https://ikenox.info" + props.thumbnail.publicURL}
+        />
       ) : (
         ""
       )}
