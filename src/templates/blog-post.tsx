@@ -29,8 +29,10 @@ export const BlogPostTemplate: React.FC<{
       )}
     </Helmet>
     <div>
-      <h1 className="text-xxlarge">{props.title}</h1>
-      {props.date}
+      <h1 style={{ marginBottom: 0 }} className="text-xxlarge">
+        {props.title}
+      </h1>
+      <p style={{ marginBottom: "2rem" }}>{props.date}</p>
       <HTMLContent content={props.content} />
       {props.tags && props.tags.length ? (
         <div style={{ marginTop: `4rem` }}>

@@ -20,15 +20,15 @@ const Bio = () => (
       <img
         src={profilePic}
         alt={`Naoto Ikeno`}
-        width={80}
-        height={80}
-        style={{ borderRadius: 40 }}
+        width={60}
+        height={60}
+        style={{ borderRadius: 30 }}
       />
     </Link>
     <div style={{ marginLeft: "12px" }}>
-      <span className="text-large heading">Naoto Ikeno</span>
+      <span className="heading">Naoto Ikeno</span>
       &nbsp;
-      <span className="text-large">
+      <span>
         <ExternalLink to={`https://github.com/ikenox`}>
           <FaGithub />
         </ExternalLink>
@@ -38,7 +38,10 @@ const Bio = () => (
         </ExternalLink>
       </span>
       <br />
-      Backend Engineer, Software Architecture & Design, Perl, Rust, Golang, GCP
+      <span>
+        Backend Engineer, Software Architecture & Design, Perl, Rust, Golang,
+        GCP
+      </span>
     </div>
   </div>
 );
