@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import HTMLContent from "../components/HTMLContent";
+import MarkdownHTMLContent from "../components/MarkdownHTMLContent";
 
 export const AboutPageTemplate: React.FC<{
   title: string;
@@ -9,7 +9,7 @@ export const AboutPageTemplate: React.FC<{
 }> = props => (
   <section>
     <h1 className="text-xxlarge">{props.title}</h1>
-    <HTMLContent content={props.content} />
+    <MarkdownHTMLContent content={props.content} />
   </section>
 );
 

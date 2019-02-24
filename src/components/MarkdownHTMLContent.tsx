@@ -1,8 +1,9 @@
 import * as React from "react";
 
 import * as Prism from "prismjs";
+import "./prism.css";
 
-const HTMLContent = class extends React.Component<{ content: string }> {
+const MarkdownHTMLContent = class extends React.Component<{ content: string }> {
   componentDidMount() {
     Prism.highlightAll();
   }
@@ -12,4 +13,4 @@ const HTMLContent = class extends React.Component<{ content: string }> {
   }
 };
 
-export default HTMLContent;
+export default MarkdownHTMLContent;

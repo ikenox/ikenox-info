@@ -1,9 +1,8 @@
 import * as React from "react";
-import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link, StaticQuery, StaticQueryProps } from "gatsby";
 import Layout from "../components/Layout";
-import HTMLContent from "../components/HTMLContent";
+import MarkdownHTMLContent from "../components/MarkdownHTMLContent";
 import Bio from "../components/Bio";
 
 export const BlogPostTemplate: React.FC<{
@@ -17,7 +16,7 @@ export const BlogPostTemplate: React.FC<{
 }> = props => (
   <section className="section">
     <Helmet>
-      <html lang={props.lang !== null ? props.lang : "ja"} />
+      {/*<html lang={props.lang !== null ? props.lang : "ja"} />*/}
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
       <meta property="og:description" content={props.description} />
@@ -33,19 +32,19 @@ export const BlogPostTemplate: React.FC<{
         {props.title}
       </h1>
       <p style={{ marginBottom: "2rem" }}>{props.date}</p>
-      <HTMLContent content={props.content} />
-      {props.tags && props.tags.length ? (
-        <div style={{ marginTop: `4rem` }}>
-          <h4>Tags</h4>
-          <ul className="taglist">
-            {props.tags.map(tag => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
+      <MarkdownHTMLContent content={props.content} />
+      {/*{props.tags && props.tags.length ? (*/}
+      {/*<div style={{ marginTop: `4rem` }}>*/}
+      {/*<h4>Tags</h4>*/}
+      {/*<ul className="taglist">*/}
+      {/*{props.tags.map(tag => (*/}
+      {/*<li key={tag + `tag`}>*/}
+      {/*<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>*/}
+      {/*</li>*/}
+      {/*))}*/}
+      {/*</ul>*/}
+      {/*</div>*/}
+      {/*) : null}*/}
     </div>
   </section>
 );
