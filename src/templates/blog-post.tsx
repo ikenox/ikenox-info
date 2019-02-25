@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import MarkdownHTMLContent from "../components/MarkdownHTMLContent";
 import Bio from "../components/Bio";
 import PocketButton from "../components/SocialButtons/PocketButton";
+import { HatenaBookmarkButton } from "../components/SocialButtons/HatenaBookmarkButton";
 
 export const BlogPostTemplate: React.FC<{
   content: any;
@@ -37,6 +38,7 @@ export const BlogPostTemplate: React.FC<{
       </h1>
       <p style={{ marginBottom: "2rem" }}>{props.date}</p>
       <PocketButton />
+      <HatenaBookmarkButton />
       <MarkdownHTMLContent content={props.content} />
       {/*{props.tags && props.tags.length ? (*/}
       {/*<div style={{ marginTop: `4rem` }}>*/}
