@@ -9,8 +9,8 @@ import ExternalLink from "./ExternalLink";
 const Bio = () => (
   <div
     style={{
-      marginTop: ".5rem",
-      marginBottom: ".5rem",
+      marginTop: "1rem",
+      marginBottom: "1rem",
       verticalAlign: "middle",
       display: "flex",
       alignItems: "center"
@@ -22,7 +22,7 @@ const Bio = () => (
         alt={`Naoto Ikeno`}
         width={60}
         height={60}
-        style={{ borderRadius: 30 }}
+        // style={{ borderRadius: 30 }}
       />
     </Link>
     <div style={{ marginLeft: "12px" }}>

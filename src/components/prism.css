@@ -1,11 +1,13 @@
 /**
- * prism.js Funky theme
- * Based on “Polyfilling the gaps” talk slides http://lea.verou.me/polyfilling-the-gaps/
- * @author Lea Verou
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
  */
 
 code[class*="language-"],
 pre[class*="language-"] {
+  color: #ccc;
+  background: none;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   text-align: left;
   white-space: pre;
@@ -26,77 +28,79 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  padding: 0.4em 0.8em;
+  padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-  background: black;
-  background-size: 1em 1em;
 }
 
-code[class*="language-"] {
-  background: black;
-  color: white;
-  box-shadow: -0.3em 0 0 0.3em black, 0.3em 0 0 0.3em black;
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #2d2d2d;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: 0.2em;
+  padding: 0.1em;
   border-radius: 0.3em;
-  box-shadow: none;
   white-space: normal;
 }
 
 .token.comment,
+.token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #aaa;
-}
-
-.token.punctuation {
   color: #999;
 }
 
-.namespace {
-  opacity: 0.7;
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+  color: #e2777a;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+  color: #f08d49;
 }
 
 .token.property,
-.token.tag,
-.token.boolean,
-.token.number,
+.token.class-name,
 .token.constant,
 .token.symbol {
-  color: #0cf;
+  color: #f8c555;
 }
 
 .token.selector,
-.token.attr-name,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #cc99cd;
+}
+
 .token.string,
 .token.char,
-.token.builtin {
-  color: yellow;
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #7ec699;
 }
 
 .token.operator,
 .token.entity,
-.token.url,
-.language-css .token.string,
-.toke.variable,
-.token.inserted {
-  color: yellowgreen;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: deeppink;
-}
-
-.token.regex,
-.token.important {
-  color: orange;
+.token.url {
+  color: #67cdcc;
 }
 
 .token.important,
@@ -111,6 +115,6 @@ code[class*="language-"] {
   cursor: help;
 }
 
-.token.deleted {
-  color: red;
+.token.inserted {
+  color: green;
 }
