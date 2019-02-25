@@ -11,7 +11,7 @@ export class HatenaBookmarkButton extends React.Component {
 
   render() {
     return (
-      <div id="hatena-button-wrapper">
+      <span id="hatena-button-wrapper" style={{ height: "20px" }}>
         <a
           href="http://b.hatena.ne.jp/entry/"
           className="hatena-bookmark-button"
@@ -27,7 +27,7 @@ export class HatenaBookmarkButton extends React.Component {
             style={{ border: null }}
           />
         </a>
-      </div>
+      </span>
     );
   }
 }

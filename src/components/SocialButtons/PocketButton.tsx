@@ -1,4 +1,5 @@
 import * as React from "react";
+import styled, { css } from "styled-components";
 
 class PocketButton extends React.Component {
   componentDidMount(): void {
@@ -6,20 +7,33 @@ class PocketButton extends React.Component {
     script.id = "pocket-btn-js";
     script.src = "https://widgets.getpocket.com/v1/j/btn.js?v=1";
     script.async = true;
-    document.getElementById("pocket-wrapper").appendChild(script);
+    document
+      .getElementById("pocket-button-a")
+      .parentElement.appendChild(script);
   }
 
   render() {
     return (
-      <div id="pocket-wrapper">
+      <PocketButtonWrapper>
         <a
+          id="pocket-button-a"
           data-pocket-label="pocket"
           data-pocket-count="horizontal"
           className="pocket-btn"
           data-lang="en"
         />
-      </div>
+      </PocketButtonWrapper>
     );
   }
 }
+
+const PocketButtonWrapper = styled.div`
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+  .pocket-btn {
+    display: inline-block;
+  }
+`;
+
 export default PocketButton;
