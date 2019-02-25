@@ -4,6 +4,7 @@ import { graphql, Link, StaticQuery, StaticQueryProps } from "gatsby";
 import Layout from "../components/Layout";
 import MarkdownHTMLContent from "../components/MarkdownHTMLContent";
 import Bio from "../components/Bio";
+import PocketButton from "../components/SocialButtons/PocketButton";
 
 export const BlogPostTemplate: React.FC<{
   content: any;
@@ -35,6 +36,7 @@ export const BlogPostTemplate: React.FC<{
         {props.title}
       </h1>
       <p style={{ marginBottom: "2rem" }}>{props.date}</p>
+      <PocketButton />
       <MarkdownHTMLContent content={props.content} />
       {/*{props.tags && props.tags.length ? (*/}
       {/*<div style={{ marginTop: `4rem` }}>*/}

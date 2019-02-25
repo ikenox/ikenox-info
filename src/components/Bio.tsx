@@ -9,8 +9,8 @@ import ExternalLink from "./ExternalLink";
 const Bio = () => (
   <div
     style={{
-      marginTop: "1.5rem",
-      marginBottom: "1.5rem",
+      marginTop: ".5rem",
+      marginBottom: ".5rem",
       verticalAlign: "middle",
       display: "flex",
       alignItems: "center"
