@@ -20,31 +20,34 @@ const Bio = () => (
       <img
         src={profilePic}
         alt={`Naoto Ikeno`}
-        width={60}
-        height={60}
+        width={64}
+        height={64}
         // style={{ borderRadius: 30 }}
       />
     </Link>
     <div style={{ marginLeft: "12px" }}>
       <span className="heading">Naoto Ikeno</span>
-      &nbsp;
-      <span>
-        <ExternalLink to={`https://github.com/ikenox`}>
-          <FaGithub />
-        </ExternalLink>
-        &nbsp;
-        <ExternalLink to={`https://twitter.com/ikenox_`}>
-          <FaTwitter />
-        </ExternalLink>
-        &nbsp;
-        <ExternalLink to="/rss.xml">
-          <FaRss />
-        </ExternalLink>
-      </span>
       <br />
       <span>
         Backend Engineer, Software Architecture & Design, Perl, Rust, Golang,
         GCP
+      </span>
+      <br />
+      <span>
+        <ExternalLink to={`https://github.com/ikenox`}>
+          {/*<FaGithub />*/}
+          GitHub
+        </ExternalLink>
+        &nbsp;
+        <ExternalLink to={`https://twitter.com/ikenox_`}>
+          {/*<FaTwitter />*/}
+          Twitter
+        </ExternalLink>
+        &nbsp;
+        <ExternalLink to="/rss.xml">
+          RSS
+          {/*<FaRss />*/}
+        </ExternalLink>
       </span>
     </div>
   </div>
