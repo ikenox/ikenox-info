@@ -78,6 +78,7 @@ const BlogPost: React.FC<{
         thumbnail={props.data.markdownRemark.frontmatter.thumbnail}
         lang={props.data.markdownRemark.frontmatter.lang}
       />
+      <div style={{ height: "1rem" }} />
       <Bio />
     </Layout>
   );
