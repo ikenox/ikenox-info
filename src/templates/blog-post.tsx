@@ -37,8 +37,8 @@ export const BlogPostTemplate: React.FC<{
       <h1 style={{ marginBottom: 0 }} className="text-xxlarge">
         {props.title}
       </h1>
-      <div style={{ margin: ".2rem 0 0 0" }}>{props.date}</div>
-      <div style={{ margin: ".6rem 0 0 0" }}>
+      <div style={{ margin: ".7rem 0 0 0" }}>{props.date}</div>
+      <div style={{ margin: ".7rem 0 0 0" }}>
         <HatenaBookmarkButton />
         &nbsp;
         <TwitterButton />
