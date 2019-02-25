@@ -10,6 +10,12 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-catch-links",
     {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-component"]
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [

@@ -38,7 +38,7 @@ export const BlogPostTemplate: React.FC<{
         {props.title}
       </h1>
       <div style={{ margin: ".7rem 0 0 0" }}>{props.date}</div>
-      <div style={{ margin: ".7rem 0 0 0" }}>
+      <div style={{ margin: "1rem 0 0 0" }}>
         <HatenaBookmarkButton />
         &nbsp;
         <TwitterButton />
@@ -70,7 +70,7 @@ const BlogPost: React.FC<{
     <Layout>
       <Helmet titleTemplate={`%s - ${props.data.site.siteMetadata.title}`} />
       <BlogPostTemplate
-        content={props.data.markdownRemark.html}
+        content={props.data.markdownRemark.htmlAst}
         description={props.data.markdownRemark.frontmatter.description}
         tags={props.data.markdownRemark.frontmatter.tags}
         title={props.data.markdownRemark.frontmatter.title}
@@ -95,7 +95,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      htmlAst
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
