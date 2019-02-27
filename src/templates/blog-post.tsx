@@ -25,7 +25,7 @@ export const BlogPostTemplate: React.FC<{
       <meta property="og:description" content={props.description} />
       <meta property="og:title" content={props.title} />
       <meta property="og:type" content="article" />
-      {props.thumbnail !== null ? (
+      {props.thumbnail !== undefined ? (
         <meta
           property="og:image"
           content={"https://ikenox.info" + props.thumbnail.publicURL}
