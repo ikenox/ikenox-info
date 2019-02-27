@@ -7,17 +7,9 @@ import "prismjs/components/prism-perl";
 import "./prism.css";
 import { isProduction } from "../util";
 
-const rehypeReact = require("rehype-react");
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { "preview-link": PreviewLink }
-}).Compiler;
-
 // FIXME move to all.sass
 import "./prism-custom.sass";
 import "./blog-post.sass";
-import PreviewLink from "./PreviewLink";
 
 const MarkdownHTMLContent = class extends React.Component<{ content: string }> {
   componentDidMount() {
@@ -35,7 +27,7 @@ const MarkdownHTMLContent = class extends React.Component<{ content: string }> {
   }
 
   render() {
-    return <div>{renderAst(this.props.content)}</div>;
+    return <div dangerouslySetInnerHTML={{ __html: this.props.content }} />;
   }
 };
 

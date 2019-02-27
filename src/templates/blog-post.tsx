@@ -71,7 +71,7 @@ const BlogPost: React.FC<{
     <Layout>
       <Helmet titleTemplate={`%s - ${props.data.site.siteMetadata.title}`} />
       <BlogPostTemplate
-        content={props.data.markdownRemark.htmlAst}
+        content={props.data.markdownRemark.html}
         description={props.data.markdownRemark.frontmatter.description}
         tags={props.data.markdownRemark.frontmatter.tags}
         title={props.data.markdownRemark.frontmatter.title}
@@ -96,7 +96,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      htmlAst
+      html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

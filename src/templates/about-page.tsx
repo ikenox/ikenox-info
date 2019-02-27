@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import MarkdownHTMLContent from "../components/MarkdownHTMLContent";
 import Helmet from "react-helmet";
+import { renderAst } from "../util";
 
 export const AboutPageTemplate: React.FC<{
   title: string;
@@ -21,7 +22,7 @@ const AboutPage: React.FC<{ data: { markdownRemark: any } }> = props => (
     </Helmet>
     <AboutPageTemplate
       title={props.data.markdownRemark.frontmatter.title}
-      content={props.data.markdownRemark.htmlAst}
+      content={props.data.markdownRemark.html}
     />
   </Layout>
 );
@@ -31,7 +32,7 @@ export default AboutPage;
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      htmlAst
+      html
       frontmatter {
         title
       }
