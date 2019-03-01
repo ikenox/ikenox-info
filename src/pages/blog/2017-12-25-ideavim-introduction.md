@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: IntelliJ(Android Studio)のVimプラグイン「IdeaVim」の使い方と設定
 date: "2017-12-25T00:00Z"
-thumbnail: "./overview.gif"
+thumbnail: "../../img/overview.gif"
 ---
 
 English version is [here](/2019-01-25-getting-started-ideavim).
@@ -23,7 +23,7 @@ IdeaVim は、**IntelliJ や Android Studio などの JetBrains 系列の IDE �
 
 ※キーマップはカスタマイズ済です。
 
-<img src="./overview.gif" style="max-width:100%;"></img>
+<img src="../../img/overview.gif" style="max-width:100%;"></img>
 
 ### なぜ IdeaVim を使うか
 
@@ -63,7 +63,7 @@ IdeaVim は、**IntelliJ や Android Studio などの JetBrains 系列の IDE �
 通常の IntelliJ プラグインと同じく、`[Preferences] > [Plugins]`からインストールできます。  
 インストール後に IntelliJ を再起動すると IdeaVim が有効になります。
 
-![Install IdeaVim](./install-ideavim.png)
+![Install IdeaVim](../../img/install-ideavim.png)
 
 ### EAP ビルド
 
@@ -182,7 +182,7 @@ vnoremap ,a :action GotoAction<CR>
 
 まず、IntelliJ の`[Preferences] > [Keymap]`から、設定したい機能を探します。その機能に IntelliJ デフォルトで割り当てられているショートカットキーから探すと早いです。
 
-![actionlist](./keymap.png)
+![actionlist](../../img/keymap.png)
 
 見つかったら、その機能の名前を確認しておきます。
 
@@ -191,7 +191,7 @@ vnoremap ,a :action GotoAction<CR>
 検索結果には現在そのアクションに割り当てられているショートカットキーも表示されるため、それも参考にすると見つけやすいかと思います。
 (ショートカットキーでアクションの検索ができるようになってくれると便利そうですね…)
 
-<img src="./actionlist.gif" style="max-width:100%;"></img>
+<img src="../../img/actionlist.gif" style="max-width:100%;"></img>
 
 ## おわりに
 

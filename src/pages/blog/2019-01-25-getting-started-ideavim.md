@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Getting Started with IdeaVim
 date: "2019-01-25T00:00Z"
-thumbnail: "./overview.gif"
+thumbnail: "../../img/overview.gif"
 lang: en
 ---
 
@@ -19,7 +19,7 @@ IdeaVim is a Vim emulation plugin for IntelliJ or other Jetbrains IDEs. This plu
 
 Keymap is personally customized.
 
-<img src="./overview.gif" style="max-width:100%;"></img>
+<img src="../../img/overview.gif" style="max-width:100%;"></img>
 
 ### Why use IdeaVim
 
@@ -55,7 +55,7 @@ You can see more details at README.md of [GitHub repositoy](https://github.com/J
 In IntelliJ or other Jetbrains IDEs, you can install IdeaVim from `[Preferences] > [Plugins]`.
 After install, you have to restart the IDE to enable IdeaVim.
 
-![Install IdeaVim](./install-ideavim.png)
+![Install IdeaVim](../../../img/install-ideavim.png)
 
 ### EAP build
 
@@ -179,7 +179,7 @@ vnoremap ,a :action GotoAction<CR>
 If you want to know an action name of some IntelliJ functions, you can use an `:actionlist` command.
 By using the command you can search an action by words.
 
-<img src="./actionlist.gif" style="max-width:100%;"></img>
+<img src="../../img/actionlist.gif" style="max-width:100%;"></img>
 
 But, currently there is no way to know the action name of the IntelliJ function which you want to call from IdeaVim.  
 Calling `:actionlist` will display assigned shortcut key for the each action. It may be a hint of the corresponded IntelliJ function.

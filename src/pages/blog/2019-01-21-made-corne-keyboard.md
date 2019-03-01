@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Corne Cherry Keyboardを組んだ
 date: "2019-01-21T00:00Z"
-thumbnail: "./my-corne2-2.jpg"
+thumbnail: "../../my-corne2-2.jpg"
 ---
 
 Corne Cherry Keyboard は、<a href="https://twitter.com/foostan" target="_blank">@foostan</a>さんが設計している自作キーボード。  
@@ -15,11 +15,11 @@ Corne Cherry Keyboard は、<a href="https://twitter.com/foostan" target="_blank
 
 見た目と使い心地ともにとても満足しています。会社で毎日バリバリ使ってます。
 
-![My Corne Cherry Keyboard](my-corne.jpg)
+![My Corne Cherry Keyboard](../../img/my-corne.jpg)
 
-![My Corne Cherry Keyboard](my-corne2-2.jpg)
+![My Corne Cherry Keyboard](../../img/my-corne2-2.jpg)
 
-![My Corne Cherry Keyboard](my-corne3.jpg)
+![My Corne Cherry Keyboard](../../img/my-corne3.jpg)
 
 ## 出会い
 
@@ -155,7 +155,7 @@ L2 layer
 自作キーボードは下手に自分でカスタマイズできてしまうせいで、より快適なキーボードを求めていろいろ試したくなってしまい、終わりが見えない。  
 特にキースイッチやキーキャップの誘惑がすごくて、最初に Corne Cherry を作ろうと思った際には必要最低限な数のキースイッチやキーキャップだけを買ったはずなのに、なぜか今ではキーボードをもう 1 つ作れるくらいのそれが余っている。
 
-![ストック](stock.jpg)
+![ストック](../../img/stock.jpg)
 
 キースイッチについては、最初は静音黒軸を使ってたけど、静音じゃないほうが打ち心地が軽やかで気持ちいい気がしてしまい、気づいたら BOX 赤軸に変えていた。
 そしてそれから一週間経った今、今度は BOX 黒軸が欲しくなっている。多分この週末で買いに行くんだと思う。  
