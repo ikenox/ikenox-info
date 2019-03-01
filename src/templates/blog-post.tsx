@@ -1,13 +1,12 @@
 import * as React from "react";
+import { Component } from "react";
 import Helmet from "react-helmet";
-import { graphql, Link, StaticQuery, StaticQueryProps } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import MarkdownHTMLContent from "../components/MarkdownHTMLContent";
 import Bio from "../components/Bio";
 import PocketButton from "../components/SocialButtons/PocketButton";
 import { HatenaBookmarkButton } from "../components/SocialButtons/HatenaBookmarkButton";
 import { TwitterButton } from "../components/SocialButtons/TwitterButton";
-import { Component } from "react";
 import { renderAst } from "../util";
 
 export const BlogPostTemplate: React.FC<{
@@ -21,7 +20,10 @@ export const BlogPostTemplate: React.FC<{
 }> = props => (
   <section className="section">
     <Helmet>
-      {/*<html lang={props.lang !== null ? props.lang : "ja"} />*/}
+      <meta
+        httpEquiv="content-language"
+        content={props.lang !== null ? props.lang : "ja"}
+      />
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
       <meta property="og:description" content={props.description} />

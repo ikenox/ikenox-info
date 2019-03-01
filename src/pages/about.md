@@ -1,5 +1,5 @@
 ---
-templateKey: "about-page"
+templateKey: "blog-post"
 path: /about
 title: About
 description: "Naoto Ikeno's profile"
@@ -17,6 +17,9 @@ description: "Naoto Ikeno's profile"
 
 ## Current Interests
 
+- Kubernetes on AWS/GCP
+- DevOps
+- Infra as Code
 - Functional Programming Design Patterns
   - Haskell
 - Writing Embedded Software
