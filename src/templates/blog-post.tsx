@@ -7,9 +7,11 @@ import Bio from "../components/Bio";
 import PocketButton from "../components/SocialButtons/PocketButton";
 import { HatenaBookmarkButton } from "../components/SocialButtons/HatenaBookmarkButton";
 import { TwitterButton } from "../components/SocialButtons/TwitterButton";
+import { Component } from "react";
+import { renderAst } from "../util";
 
 export const BlogPostTemplate: React.FC<{
-  content: any;
+  content: Component;
   description: any;
   tags: Array<any>;
   title: any;
@@ -25,7 +27,7 @@ export const BlogPostTemplate: React.FC<{
       <meta property="og:description" content={props.description} />
       <meta property="og:title" content={props.title} />
       <meta property="og:type" content="article" />
-      {props.thumbnail !== undefined ? (
+      {props.thumbnail !== null ? (
         <meta
           property="og:image"
           content={"https://ikenox.info" + props.thumbnail.publicURL}
@@ -47,7 +49,7 @@ export const BlogPostTemplate: React.FC<{
         <PocketButton />
       </div>
       <div style={{ height: "1rem" }} />
-      <MarkdownHTMLContent content={props.content} />
+      {props.content}
       {/*{props.tags && props.tags.length ? (*/}
       {/*<div style={{ marginTop: `4rem` }}>*/}
       {/*<h4>Tags</h4>*/}
@@ -71,7 +73,7 @@ const BlogPost: React.FC<{
     <Layout>
       <Helmet titleTemplate={`%s - ${props.data.site.siteMetadata.title}`} />
       <BlogPostTemplate
-        content={props.data.markdownRemark.html}
+        content={renderAst(props.data.markdownRemark.htmlAst)}
         description={props.data.markdownRemark.frontmatter.description}
         tags={props.data.markdownRemark.frontmatter.tags}
         title={props.data.markdownRemark.frontmatter.title}
@@ -96,7 +98,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      htmlAst
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
