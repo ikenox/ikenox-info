@@ -6,7 +6,9 @@ export class HatenaBookmarkButton extends React.Component {
     script.type = "text/javascript";
     script.src = "https://b.st-hatena.com/js/bookmark_button.js";
     script.async = true;
-    document.getElementById("hatena-button-wrapper").appendChild(script);
+    try {
+      document.getElementById("hatena-button-wrapper").appendChild(script);
+    } catch {}
   }
 
   render() {

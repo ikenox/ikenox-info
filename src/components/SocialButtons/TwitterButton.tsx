@@ -6,9 +6,11 @@ export class TwitterButton extends React.Component {
     script.type = "text/javascript";
     script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
-    document
-      .getElementById("twitter-button-link")
-      .parentElement.appendChild(script);
+    try {
+      document
+        .getElementById("twitter-button-link")
+        .parentElement.appendChild(script);
+    } catch {}
   }
 
   render() {

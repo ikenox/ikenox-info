@@ -7,9 +7,11 @@ class PocketButton extends React.Component {
     script.id = "pocket-btn-js";
     script.src = "https://widgets.getpocket.com/v1/j/btn.js?v=1";
     script.async = true;
-    document
-      .getElementById("pocket-button-a")
-      .parentElement.appendChild(script);
+    try {
+      document
+        .getElementById("pocket-button-a")
+        .parentElement.appendChild(script);
+    } catch {}
   }
 
   render() {
