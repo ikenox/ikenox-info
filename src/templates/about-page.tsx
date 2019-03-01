@@ -17,6 +17,8 @@ const AboutPage: React.FC<{ data: { markdownRemark: any } }> = props => (
   <Layout>
     <Helmet>
       <title>About</title>
+      <meta name="description" content="Naoto Ikeno's Profile" />
+      <meta property="og:description" content="Naoto Ikeno's Profile" />
     </Helmet>
     <AboutPageTemplate content={renderAst(props.data.markdownRemark.htmlAst)} />
   </Layout>

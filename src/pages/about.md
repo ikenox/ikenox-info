@@ -2,7 +2,6 @@
 templateKey: "about-page"
 path: /about
 title: About
-description: "Naoto Ikeno's profile"
 ---
 
 ## Skills

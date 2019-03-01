@@ -11,7 +11,7 @@ import { renderAst } from "../util";
 
 export const BlogPostTemplate: React.FC<{
   content: Component;
-  description: any;
+  description?: any;
   tags: Array<any>;
   title: any;
   date: string;
@@ -22,14 +22,18 @@ export const BlogPostTemplate: React.FC<{
     <Helmet>
       <meta
         httpEquiv="content-language"
-        content={props.lang !== null ? props.lang : "ja"}
+        content={props.lang ? props.lang : "ja"}
       />
       <title>{props.title}</title>
       <meta name="description" content={props.description} />
-      <meta property="og:description" content={props.description} />
+      {props.description ? (
+        <meta property="og:description" content={props.description} />
+      ) : (
+        ""
+      )}
       <meta property="og:title" content={props.title} />
       <meta property="og:type" content="article" />
-      {props.thumbnail !== null ? (
+      {props.thumbnail ? (
         <meta
           property="og:image"
           content={"https://ikenox.info" + props.thumbnail.publicURL}
