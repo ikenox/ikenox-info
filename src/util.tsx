@@ -6,7 +6,11 @@ export function isProduction(): boolean {
 }
 
 const rehypeReact = require("rehype-react");
-export const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: { "preview-link": PreviewLink }
-}).Compiler;
+
+export const renderAst = (ast: any) => {
+  let compiler = new rehypeReact({
+    createElement: React.createElement,
+    components: { "preview-link": PreviewLink }
+  }).Compiler;
+  return compiler(ast);
+};

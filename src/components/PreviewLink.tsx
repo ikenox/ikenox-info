@@ -2,9 +2,9 @@ import * as React from "react";
 import ExternalLink from "./ExternalLink";
 
 const PreviewLink: React.FC<{ title: string; url: string }> = props => (
-  <div>
+  <span style={{ display: "block" }}>
     <ExternalLink to={props.url}>{props.title}</ExternalLink>
-  </div>
+  </span>
 );
 
 export default PreviewLink;

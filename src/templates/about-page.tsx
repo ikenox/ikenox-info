@@ -3,13 +3,15 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
 import { renderAst } from "../util";
+import { ReactNode } from "react";
+import Content from "../components/Content";
 
 export const AboutPageTemplate: React.FC<{
-  content: string;
+  content: ReactNode | string;
 }> = props => (
   <section>
     <h1 className="text-xxlarge">About</h1>
-    {props.content}
+    <Content>{props.content}</Content>
   </section>
 );
 
