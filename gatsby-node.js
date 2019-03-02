@@ -17,21 +17,23 @@ exports.createPages = ({ actions, graphql }) => {
     ["2019-01-21", "made-corne-keyboard"],
     ["2019-01-25", "getting-started-ideavim"]
   ]) {
-    createRedirect({
-      fromPath: "/" + slug[0] + "-" + slug[1],
-      toPath: "/blog/" + slug[1],
-      isPermanent: true,
-      redirectInBrowser: true
-    });
+    if (slug[1] !== "ideavim-introduction") {
+      createRedirect({
+        fromPath: "/" + slug[0] + "-" + slug[1],
+        toPath: "/blog/" + slug[1],
+        isPermanent: true,
+        redirectInBrowser: true
+      });
+      createRedirect({
+        fromPath: "/" + slug[0] + "-" + slug[1] + "/",
+        toPath: "/blog/" + slug[1] + "/",
+        isPermanent: true,
+        redirectInBrowser: true
+      });
+    }
     createRedirect({
       fromPath: "/" + slug[0] + "/" + slug[1],
       toPath: "/blog/" + slug[1],
-      isPermanent: true,
-      redirectInBrowser: true
-    });
-    createRedirect({
-      fromPath: "/" + slug[0] + "-" + slug[1] + "/",
-      toPath: "/blog/" + slug[1] + "/",
       isPermanent: true,
       redirectInBrowser: true
     });
@@ -70,17 +72,43 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
-        ),
-        // additional data can be passed via context
-        context: {
-          id
-        }
-      });
+      if (edge.node.fields.slug.includes("/ideavim-introduction")) {
+        createPage({
+          path: "/2017-12-25-ideavim-introduction",
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
+          ),
+          // additional data can be passed via context
+          context: {
+            id
+          }
+        });
+        createRedirect({
+          fromPath: "/blog/ideavim-introduction",
+          toPath: "/2017-12-25-ideavim-introduction",
+          isPermanent: true,
+          redirectInBrowser: true
+        });
+        createRedirect({
+          fromPath: "/blog/ideavim-introduction/",
+          toPath: "/2017-12-25-ideavim-introduction/",
+          isPermanent: true,
+          redirectInBrowser: true
+        });
+      } else {
+        createPage({
+          path: edge.node.fields.slug,
+          tags: edge.node.frontmatter.tags,
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`
+          ),
+          // additional data can be passed via context
+          context: {
+            id
+          }
+        });
+      }
     });
 
     // Tag pages:
