@@ -38,12 +38,12 @@ const Bio = () => (
           {/*<FaGithub />*/}
           GitHub
         </ExternalLink>
-        &nbsp;
+        &nbsp; | &nbsp;
         <ExternalLink to={`https://twitter.com/ikenox_`}>
           {/*<FaTwitter />*/}
           Twitter
         </ExternalLink>
-        &nbsp;
+        &nbsp; | &nbsp;
         <ExternalLink to="/rss.xml">
           RSS
           {/*<FaRss />*/}
