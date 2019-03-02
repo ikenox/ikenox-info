@@ -5,7 +5,7 @@ date: "2017-12-25T00:00Z"
 thumbnail: "../../img/overview.gif"
 ---
 
-English version is [here](/2019-01-25-getting-started-ideavim).
+English version is [here](/blog/getting-started-ideavim).
 
 この記事は[JetBrains Advent Calendar 2017](https://qiita.com/advent-calendar/2017/jetbrains)の最終日分の投稿です。前日まで空いていたため、滑り込みで参加させていただきました！
 

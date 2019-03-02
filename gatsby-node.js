@@ -7,60 +7,36 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions;
 
   // old path
-  createRedirect({
-    fromPath: "/2017-10-15/first-commit",
-    toPath: "/2017-10-15-first-commit",
-    isPermanent: true,
-    redirectInBrowser: true
-  });
-  createRedirect({
-    fromPath: "/2017-10-15/first-commit/",
-    toPath: "/2017-10-15-first-commit/",
-    isPermanent: true,
-    redirectInBrowser: true
-  });
-  createRedirect({
-    fromPath: "/2017-12-25/ideavim-introduction",
-    toPath: "/2017-12-25-ideavim-introduction",
-    isPermanent: true,
-    redirectInBrowser: true
-  });
-  createRedirect({
-    fromPath: "/2017-12-25/ideavim-introduction/",
-    toPath: "/2017-12-25-ideavim-introduction/",
-    isPermanent: true,
-    redirectInBrowser: true
-  });
-  createRedirect({
-    fromPath: "/2018-05-20/perl-mousex-types-enum",
-    toPath: "/2018-05-20-perl-mousex-types-enum",
-    isPermanent: true,
-    redirectInBrowser: true
-  });
-  createRedirect({
-    fromPath: "/2018-05-20/perl-mousex-types-enum/",
-    toPath: "/2018-05-20-perl-mousex-types-enum/",
-    isPermanent: true,
-    redirectInBrowser: true
-  });
   for (let slug of [
-    "2017-10-15-first-commit",
-    "2017-12-25-ideavim-introduction",
-    "2018-05-20-perl-mousex-types-enum",
-    "2018-08-04-replaced-blog-with-gatsbyjs",
-    "2018-09-02-inheritance-and-delegation-and-interface",
-    "2019-01-10-database-is-like-global-variable",
-    "2019-01-21-made-corne-keyboard",
-    "2019-01-25-getting-started-ideavim"
+    ["2017-10-15", "first-commit"],
+    ["2017-12-25", "ideavim-introduction"],
+    ["2018-05-20", "perl-mousex-types-enum"],
+    ["2018-08-04", "replaced-blog-with-gatsbyjs"],
+    ["2018-09-02", "inheritance-and-delegation-and-interface"],
+    ["2019-01-10", "database-is-like-global-variable"],
+    ["2019-01-21", "made-corne-keyboard"],
+    ["2019-01-25", "getting-started-ideavim"]
   ]) {
     createRedirect({
-      fromPath: "/" + slug,
+      fromPath: "/" + slug[0] + "-" + slug[1],
       toPath: "/blog/" + slug,
       isPermanent: true,
       redirectInBrowser: true
     });
     createRedirect({
-      fromPath: "/" + slug + "/",
+      fromPath: "/" + slug[0] + "/" + slug[1],
+      toPath: "/blog/" + slug,
+      isPermanent: true,
+      redirectInBrowser: true
+    });
+    createRedirect({
+      fromPath: "/" + slug[0] + "-" + slug[1] + "/",
+      toPath: "/blog/" + slug + "/",
+      isPermanent: true,
+      redirectInBrowser: true
+    });
+    createRedirect({
+      fromPath: "/" + slug[0] + "/" + slug[1] + "/",
       toPath: "/blog/" + slug + "/",
       isPermanent: true,
       redirectInBrowser: true

@@ -6,7 +6,7 @@ thumbnail: "../../img/overview.gif"
 lang: en
 ---
 
-Japanese version is [here](/2017-12-25-ideavim-introduction)
+Japanese version is [here](/blog/ideavim-introduction)
 
 ## IdeaVim
 
