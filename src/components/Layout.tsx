@@ -8,8 +8,6 @@ import "./all.sass";
 import Helmet from "react-helmet";
 import Bio from "./Bio";
 
-import "../components/prism-custom.sass";
-
 const favicon32 = require("../../static/favicon.ico");
 const icon = require("../../static/icon.png");
 
