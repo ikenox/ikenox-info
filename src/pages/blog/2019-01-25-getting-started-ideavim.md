@@ -131,7 +131,7 @@ The followings are my recommended actions.
 
 #### Examples of Action
 
-| Action               | 概要                                           |
+| Action               | Description                                    |
 | -------------------- | ---------------------------------------------- |
 | SearchEverywhere     | Navigate to any symbol                         |
 | FindInPath           | Find text in the whole project                 |

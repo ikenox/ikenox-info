@@ -1,15 +1,14 @@
-import "../components/markdown.sass";
-import "../components/prism.css";
-import "../components/prism-custom.sass";
 import * as Prism from "prismjs";
-import { Component, ReactNode } from "react";
+import "./markdown.sass";
+import "./prism.css";
+import "./prism-custom.sass";
+import * as React from "react";
 
-export default class Content extends Component {
+export default class Content extends React.Component {
   componentDidMount(): void {
     Prism.highlightAll();
-    console.log("hogehoeg");
   }
-  render(): ReactNode {
+  render(): React.ReactNode {
     return this.props.children;
   }
 }
