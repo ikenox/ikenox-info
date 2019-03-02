@@ -19,25 +19,25 @@ exports.createPages = ({ actions, graphql }) => {
   ]) {
     createRedirect({
       fromPath: "/" + slug[0] + "-" + slug[1],
-      toPath: "/blog/" + slug,
+      toPath: "/blog/" + slug[1],
       isPermanent: true,
       redirectInBrowser: true
     });
     createRedirect({
       fromPath: "/" + slug[0] + "/" + slug[1],
-      toPath: "/blog/" + slug,
+      toPath: "/blog/" + slug[1],
       isPermanent: true,
       redirectInBrowser: true
     });
     createRedirect({
       fromPath: "/" + slug[0] + "-" + slug[1] + "/",
-      toPath: "/blog/" + slug + "/",
+      toPath: "/blog/" + slug[1] + "/",
       isPermanent: true,
       redirectInBrowser: true
     });
     createRedirect({
       fromPath: "/" + slug[0] + "/" + slug[1] + "/",
-      toPath: "/blog/" + slug + "/",
+      toPath: "/blog/" + slug[1] + "/",
       isPermanent: true,
       redirectInBrowser: true
     });
