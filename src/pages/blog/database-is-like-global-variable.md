@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: データベースという名のグローバル変数との向き合い方(Repository Pattern)
 date: "2019-01-12T16:30Z"
+thumbnail: "../../img/overview.gif"
 ---
 
 ## グローバル変数

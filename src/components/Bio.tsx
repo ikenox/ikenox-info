@@ -1,9 +1,8 @@
 import * as React from "react";
 
-const profilePic = require("../../static/img/profile.jpeg");
+const profilePic = require("../img/profile.jpeg");
 
 import Link from "gatsby-link";
-import { FaGithub, FaRss, FaTwitter } from "react-icons/fa";
 import ExternalLink from "./ExternalLink";
 
 const Bio = () => (

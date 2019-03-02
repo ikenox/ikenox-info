@@ -43,7 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
     isPermanent: true,
     redirectInBrowser: true
   });
-  for (let ppp of [
+  for (let slug of [
     "2017-10-15-first-commit",
     "2017-12-25-ideavim-introduction",
     "2018-05-20-perl-mousex-types-enum",
@@ -54,14 +54,14 @@ exports.createPages = ({ actions, graphql }) => {
     "2019-01-25-getting-started-ideavim"
   ]) {
     createRedirect({
-      fromPath: "/" + ppp,
-      toPath: "/blog/" + ppp,
+      fromPath: "/" + slug,
+      toPath: "/blog/" + slug,
       isPermanent: true,
       redirectInBrowser: true
     });
     createRedirect({
-      fromPath: "/" + ppp + "/",
-      toPath: "/blog/" + ppp + "/",
+      fromPath: "/" + slug + "/",
+      toPath: "/blog/" + slug + "/",
       isPermanent: true,
       redirectInBrowser: true
     });

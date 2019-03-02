@@ -8,8 +8,8 @@ import "./all.sass";
 import Helmet from "react-helmet";
 import Bio from "./Bio";
 
-const favicon32 = require("../../static/favicon.ico");
-const icon = require("../../static/icon.png");
+const favicon32 = require("../img/favicon.ico");
+const icon = require("../img/icon.png");
 
 const TemplateWrapper: React.FC = props => (
   <StaticQuery
