@@ -4,12 +4,17 @@ import "./prism.css";
 import "./prism-custom.sass";
 import * as React from "react";
 
-export default class Content extends React.Component<{ inner: any }> {
+import "prismjs/components/prism-perl";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-vim";
+
+export default class ContentContainsCode extends React.Component<{
+  inner: any;
+}> {
   componentDidMount(): void {
     Prism.highlightAll();
   }
   render(): React.ReactNode {
-    console.log(this.props.inner);
     return this.props.inner;
   }
 }

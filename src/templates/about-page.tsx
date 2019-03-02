@@ -3,14 +3,14 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
 import { renderAst } from "../util";
-import Content from "../components/Content";
+import ContentContainsCode from "../components/ContentContainsCode";
 
 export const AboutPageTemplate: React.FC<{
   content: any;
 }> = props => (
   <section>
     <h1 className="text-xxlarge">About</h1>
-    <Content inner={props.content} />
+    <ContentContainsCode inner={props.content} />
   </section>
 );
 

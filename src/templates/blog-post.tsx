@@ -7,7 +7,7 @@ import PocketButton from "../components/SocialButtons/PocketButton";
 import { HatenaBookmarkButton } from "../components/SocialButtons/HatenaBookmarkButton";
 import { TwitterButton } from "../components/SocialButtons/TwitterButton";
 import { renderAst } from "../util";
-import Content from "../components/Content";
+import ContentContainsCode from "../components/ContentContainsCode";
 
 export const BlogPostTemplate: React.FC<{
   content: any;
@@ -55,7 +55,7 @@ export const BlogPostTemplate: React.FC<{
         <PocketButton />
       </div>
       <div style={{ height: "1rem" }} />
-      <Content inner={props.content} />
+      <ContentContainsCode inner={props.content} />
       {/*{props.tags && props.tags.length ? (*/}
       {/*<div style={{ marginTop: `4rem` }}>*/}
       {/*<h4>Tags</h4>*/}
