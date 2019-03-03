@@ -1,6 +1,6 @@
 import * as React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Bio from "../components/Bio";
 import PocketButton from "../components/SocialButtons/PocketButton";
@@ -89,6 +89,8 @@ const BlogPost: React.FC<{
       />
       <div style={{ height: "1rem" }} />
       <Bio />
+      <div style={{ height: "1rem" }} />
+      <Link to={"/"}>Back to blog posts</Link>
     </Layout>
   );
 };
