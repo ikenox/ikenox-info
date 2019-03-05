@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://brave-davinci-a8b979.netlify.com/* https://ikenox.info/:splat 301!

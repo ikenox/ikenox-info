@@ -4,3 +4,8 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "https://brave-davinci-a8b979.netlify.com/*"
+  to = "https://ikenox.info/:splat"
+  status = 301
+  force = true
