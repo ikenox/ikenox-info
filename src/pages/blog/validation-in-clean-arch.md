@@ -50,8 +50,8 @@ TBW
 
 ## Application 層[^1]と Domain 層[^2]それぞれにおけるバリデーション
 
-[^1]原典では Application Business Rules 層と呼ばれている
-[^2]原典では Enterprise Business Rules 層と呼ばれている
+[^1]: 原典では Application Business Rules 層と呼ばれている
+[^2]: 原典では Enterprise Business Rules 層と呼ばれている
 
 Application 層にはアプリケーションロジックが書かれ、Domain 層にはドメインロジックが書かれる。
 
