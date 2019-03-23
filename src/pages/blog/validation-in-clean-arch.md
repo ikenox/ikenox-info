@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Clean Architectureにおいて、バリデーションはどこでやるべきか / アプリケーションロジックとドメインロジックの違い
+title: Clean Architectureにおいて、バリデーションはどこでやるべきか
 date: "2019-03-23T23:00Z"
 thumbnail: "./hoge.png"
 lang: ja
