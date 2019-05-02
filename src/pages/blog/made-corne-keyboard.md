@@ -3,10 +3,12 @@ templateKey: blog-post
 title: コルネキーボード (Corne Cherry) を組んだ
 date: '2019-01-21T00:00Z'
 ---
-コルネキーボード (Corne Keyboard) は、<a href="https://twitter.com/foostan" target="_blank">@foostan</a>さんが設計している自作キーボード。ハッシュタグは <a href="https://twitter.com/search?q=%23crkbd&src=typd" target="_blank">#crkbd</a> 。  
-設計図はオープンソースになっており、GitHub (<a href="https://github.com/foostan/crkbd/" target="_blank">foostan/crkbd</a>) にて公開されている。
 
-コルネキーボードには種類がいくつかあり、自分はそのうちの<a href="https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/buildguide_jp.md" target="_blank">Corne Cherry</a>という種類のものを組んだ。現在は遊舎工房さんにて<a href="https://yushakobo.jp/shop/corne-cherry/" target="_blank">通販</a>や<a href="https://yushakobo.jp/news/2018/12/07/storeopen/" target="_blank">実店舗</a>でキットが販売されている様子。
+Corne Cherry Keyboard は、<a href="https://twitter.com/foostan" target="_blank">@foostan</a>さんが設計している自作キーボード。  
+設計図はオープンソースになっており、GitHub にて公開されている。(<a href="https://github.com/foostan/crkbd/" target="_blank">foostan/crkbd</a>)  
+また、現在は<a href="https://yushakobo.jp/news/2018/12/07/storeopen/" target="_blank">遊舎工房</a>さんの実店舗にて Corne Cherry のキットが販売されている様子。
+
+自分もキットを購入して実際に組み上げたので、実際に作ったり使ったりしてみての感想を書いていきます。
 
 ## 完成物
 
@@ -156,6 +158,9 @@ L2 layer
 
 キースイッチについては、最初は静音黒軸を使ってたけど、静音じゃないほうが打ち心地が軽やかで気持ちいい気がしてしまい、気づいたら BOX 赤軸に変えていた。
 そしてそれから一週間経った今、今度は BOX 黒軸が欲しくなっている。多分この週末で買いに行くんだと思う。  
+
+(追記: BOX黒軸じゃなくて[Tealios V2](https://yushakobo.jp/shop/a02te/)を買いました。打鍵感やLED光の通りやすさがVery Good)
+
 キーキャップについては、DSA Profile のキーキャップじゃなくて Cherry Profile のものを使ってみたくなって気づいたら購入していた。そのほか様々なカラーのキーキャップも少量ずつ購入してストックしています。
 
 そのほか、いま興味があるのは以下。
