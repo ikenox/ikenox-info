@@ -1,14 +1,17 @@
 ---
 templateKey: blog-post
-title: コルネキーボード (Corne Cherry) を組んだ
+title: Corne Keyboard (コルネキーボード) を組んだ
 date: '2019-01-21T00:00Z'
 ---
 
-Corne Cherry Keyboard は、<a href="https://twitter.com/foostan" target="_blank">@foostan</a>さんが設計している自作キーボード。  
-設計図はオープンソースになっており、GitHub にて公開されている。(<a href="https://github.com/foostan/crkbd/" target="_blank">foostan/crkbd</a>)  
-また、現在は<a href="https://yushakobo.jp/news/2018/12/07/storeopen/" target="_blank">遊舎工房</a>さんの実店舗にて Corne Cherry のキットが販売されている様子。
+Corne Keyboard は、<a href="https://twitter.com/foostan" target="_blank">@foostan</a>さんが設計している自作キーボード。ハッシュタグは <a href="https://twitter.com/search?q=%23crkbd&src=typd" target="_blank">#crkbd</a>。  
+設計図はオープンソースになっており、<a href="https://github.com/foostan/crkbd/" target="_blank">GitHubにて公開</a>されている。  
 
-自分もキットを購入して実際に組み上げたので、実際に作ったり使ったりしてみての感想を書いていきます。
+なお実際には、Corne Keyboard というのはCorneシリーズの総称のようなものであり、具体的なキーボードの種類としては<a href="https://yushakobo.jp/shop/corne-cherry/" target="_blank">Corne Cherry</a>、<a href="https://yushakobo.jp/shop/corne-chocolate/" target="_blank">Corne Chocolate</a>など、いくつかの種類が存在する。
+
+今回自分はCorne Cherryのキットを購入させてもらったので、実際に作ったり使ったりしてみての感想を書いていきます。
+
+なお、現在は遊舎工房さんの<a href="https://yushakobo.jp/shop/corne-cherry/" target="_blank">ECサイト</a>や<a href="https://yushakobo.jp/news/2018/12/07/storeopen/" target="_blank">実店舗</a>にてキットが販売されているようです。
 
 ## 完成物
 
