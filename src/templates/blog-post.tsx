@@ -77,7 +77,7 @@ const BlogPost: React.FC<{
 }> = props => {
   return (
     <Layout>
-      <Helmet titleTemplate={`%s - ${props.data.site.siteMetadata.title}`} />
+      <Helmet titleTemplate={`%s`} />
       <BlogPostTemplate
         content={renderAst(props.data.markdownRemark.htmlAst)}
         description={props.data.markdownRemark.frontmatter.description}
