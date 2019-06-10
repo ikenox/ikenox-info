@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "ikenox.info",
     description: "Naoto Ikeno's Tech Blog",
-    siteUrl: "ikenox.info"
+    siteUrl: "https://ikenox.info"
   },
   plugins: [
     "gatsby-plugin-typescript",
