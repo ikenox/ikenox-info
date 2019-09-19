@@ -55,10 +55,7 @@ const Bio = () => (
         </span>
       </MediaQuery>
       <br />
-      <span>
-        Backend Engineer, Software Architecture & Design, Perl, Rust, Golang,
-        GCP
-      </span>
+      <span>Backend Engineer, Love Software Architecture & Design</span>
       <MediaQuery minWidth={780}>
         <br />
         <span>
