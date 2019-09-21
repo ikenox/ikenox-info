@@ -13,9 +13,9 @@ In this archicle, I'll consider where to put validation logic in Clean Architect
 I think, **the question "where is the correct place of the validation logic" is wrong.**
 **We should put the validation logic to each layer of Clean Architecture.**
 
-The word "validation" has different meanings depending on its context. We call all of the preventions of invalid thing as "validation".
+The meaning of the word "validation" is very vast and ambiguous because it has different meanings depending on its context.
 So we tend to misunderstand that the "validation" is just single role. But it's not. **Just as Clean Architecture splits the responsibility by layers, each layer has its own validation logic.**  
-**In each layer, if the input which breaks a responsibility of the layer has come, then rejecting it is the validation.** So the meaning of validation is differrent depending on its context.
+**In each layer, the system should reject the input which breaks its layer's responsibility. This is validation.** So the meaning of validation is differrent depending on its context.
 
 In Clean Architecture, a certain layer should NOT have validation logic which is not responsible for its layer.
 Otherwise, the problems I'll write later will occur.
