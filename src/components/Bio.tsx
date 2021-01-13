@@ -55,7 +55,7 @@ const Bio = () => (
         </span>
       </MediaQuery>
       <br />
-      <span>Backend Engineer, Love Software Architecture & Design</span>
+      <span>Backend Software Engineer</span>
       <MediaQuery minWidth={780}>
         <br />
         <span>
